@@ -2,6 +2,8 @@
 
 Arduino IDE用のESP32/Pico W向けHTML UI開発支援拡張機能です。WebUIの開発とArduino側の関数呼び出しを簡素化します。
 
+![alt text](image.png)
+
 ## 機能
 
 ### 1. HTML UI初期化
