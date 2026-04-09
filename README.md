@@ -33,6 +33,8 @@ cd easy-ui-maker
 sh install_macos.sh
 ```
 
+***Arduino IDEの設定で「スケッチ内のファイルを表示」を有効化してください***
+
 ## 使用方法
 
 ### ステップ1: HTML UIの初期化
