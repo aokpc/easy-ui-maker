@@ -1,0 +1,77 @@
+{
+  "name": "uimaker-ext",
+  "displayName": "UI Maker Extension",
+  "description": "Make HTML UI & C Code",
+  "version": "0.0.1",
+  "repository": "https://github.com/git/",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "browser": "./dist/web/extension.js",
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/web/extension.js",
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "configurationDefaults": {
+      "editor.bracketPairColorization.enabled": false,
+      "editor.guides.bracketPairs": false
+    },
+    "commands": [
+      {
+        "command": "uimaker-ext.init",
+        "title": "Initialize HTML UI",
+        "icon": "$(file-add)"
+      },
+      {
+        "command": "uimaker-ext.generate",
+        "title": "Generate C/Code",
+        "icon": "$(play)"
+      },
+      {
+        "command": "uimaker-ext.openHtmlView",
+        "title": "Open HTML View",
+        "icon": "$(eye)"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "uimaker-tools",
+          "title": "UI Maker",
+          "icon": "$(globe)"
+        }
+      ]
+    },
+    "views": {
+      "uimaker-tools": [
+        {
+          "id": "uimaker-tools-view",
+          "name": "Tools",
+          "visibility": "visible"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package-web",
+    "compile-web": "webpack",
+    "watch-web": "webpack --watch",
+    "package-web": "webpack --mode production"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "18.x",
+    "@types/serialport": "^8.0.5",
+    "@types/vscode": "^1.85.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "vscode-arduino-api": "^0.1.2",
+    "vscode-languageclient": "^9.0.1",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
